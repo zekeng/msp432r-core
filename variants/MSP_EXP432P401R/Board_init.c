@@ -1171,8 +1171,17 @@ const UART_FxnTable myUARTMSP432_fxnTable = {
 
 /* UART objects */
 UARTMSP432_Object uartMSP432Objects[Board_UARTCOUNT];
-unsigned char uartMSP432RingBuffer0[128];
-unsigned char uartMSP432RingBuffer1[128];
+
+#ifndef ENERGIA_BOARD_UART0_RING_BUFFER_SIZE
+#define ENERGIA_BOARD_UART0_RING_BUFFER_SIZE    128
+#endif
+
+#ifndef ENERGIA_BOARD_UART1_RING_BUFFER_SIZE
+#define ENERGIA_BOARD_UART1_RING_BUFFER_SIZE    128
+#endif
+
+unsigned char uartMSP432RingBuffer0[ENERGIA_BOARD_UART0_RING_BUFFER_SIZE];
+unsigned char uartMSP432RingBuffer1[ENERGIA_BOARD_UART1_RING_BUFFER_SIZE];
 
 
 /*
