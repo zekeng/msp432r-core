@@ -96,11 +96,17 @@ class HardwareSerial : public Stream
 
 extern HardwareSerial Serial;
 extern HardwareSerial Serial1;
+extern HardwareSerial Serial2;
+extern HardwareSerial Serial3;
 
 extern void serialEventRun(void) __attribute__((weak));
 extern void serialEventRun1(void) __attribute__((weak));
+extern void serialEventRun2(void) __attribute__((weak));
+extern void serialEventRun3(void) __attribute__((weak));
 
 extern void serialEvent() __attribute__((weak));
 extern void serialEvent1() __attribute__((weak));
+extern void serialEvent2() __attribute__((weak));
+extern void serialEvent3() __attribute__((weak));
 
 #endif

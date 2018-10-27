@@ -1172,17 +1172,32 @@ const UART_FxnTable myUARTMSP432_fxnTable = {
 /* UART objects */
 UARTMSP432_Object uartMSP432Objects[Board_UARTCOUNT];
 
-#ifndef ENERGIA_BOARD_UART0_RING_BUFFER_SIZE
-#define ENERGIA_BOARD_UART0_RING_BUFFER_SIZE    128
+#ifndef ENERGIA_BOARD_SERIAL0_RING_BUFFER_SIZE
+#define ENERGIA_BOARD_SERIAL0_RING_BUFFER_SIZE    128
 #endif
 
-#ifndef ENERGIA_BOARD_UART1_RING_BUFFER_SIZE
-#define ENERGIA_BOARD_UART1_RING_BUFFER_SIZE    128
+#ifndef ENERGIA_BOARD_SERIAL1_RING_BUFFER_SIZE
+#define ENERGIA_BOARD_SERIAL1_RING_BUFFER_SIZE    128
 #endif
 
-unsigned char uartMSP432RingBuffer0[ENERGIA_BOARD_UART0_RING_BUFFER_SIZE];
-unsigned char uartMSP432RingBuffer1[ENERGIA_BOARD_UART1_RING_BUFFER_SIZE];
+#ifndef ENERGIA_BOARD_SERIAL2_RING_BUFFER_SIZE
+#define ENERGIA_BOARD_SERIAL2_RING_BUFFER_SIZE    128
+#endif
 
+#ifndef ENERGIA_BOARD_SERIAL3_RING_BUFFER_SIZE
+#define ENERGIA_BOARD_SERIAL3_RING_BUFFER_SIZE    128
+#endif
+
+unsigned char uartMSP432RingBuffer0[ENERGIA_BOARD_SERIAL0_RING_BUFFER_SIZE];
+unsigned char uartMSP432RingBuffer1[ENERGIA_BOARD_SERIAL1_RING_BUFFER_SIZE];
+
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+unsigned char uartMSP432RingBuffer2[ENERGIA_BOARD_SERIAL2_RING_BUFFER_SIZE];
+#endif
+
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+unsigned char uartMSP432RingBuffer3[ENERGIA_BOARD_SERIAL3_RING_BUFFER_SIZE];
+#endif
 
 /*
  * The baudrate dividers were determined by using the MSP430 baudrate
@@ -1249,6 +1264,7 @@ const UARTMSP432_HWAttrsV1 uartMSP432HWAttrs[Board_UARTCOUNT] = {
         .rxPin = UARTMSP432_P1_2_UCA0RXD,
         .txPin = UARTMSP432_P1_3_UCA0TXD
     },
+
     {
         .baseAddr = EUSCI_A2_BASE,
         .intNum = INT_EUSCIA2,
@@ -1262,20 +1278,71 @@ const UARTMSP432_HWAttrsV1 uartMSP432HWAttrs[Board_UARTCOUNT] = {
         .ringBufSize = sizeof(uartMSP432RingBuffer1),
         .rxPin = UARTMSP432_P3_2_UCA2RXD,
         .txPin = UARTMSP432_P3_3_UCA2TXD
-    }
+    },
+
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+    {
+        .baseAddr = EUSCI_A1_BASE,
+        .intNum = INT_EUSCIA1,
+        .intPriority = (0xc0),
+        .clockSource = EUSCI_A_UART_CLOCKSOURCE_SMCLK,
+        .bitOrder = EUSCI_A_UART_LSB_FIRST,
+        .numBaudrateEntries = sizeof(uartMSP432Baudrates) /
+                              sizeof(UARTMSP432_BaudrateConfig),
+        .baudrateLUT = uartMSP432Baudrates,
+        .ringBufPtr  = uartMSP432RingBuffer2,
+        .ringBufSize = sizeof(uartMSP432RingBuffer2),
+        .rxPin = UARTMSP432_P2_4_UCA1RXD,
+        .txPin = UARTMSP432_P2_5_UCA1TXD
+    },
+#endif
+
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+    {
+        .baseAddr = EUSCI_A3_BASE,
+        .intNum = INT_EUSCIA3,
+        .intPriority = (0xc0),
+        .clockSource = EUSCI_A_UART_CLOCKSOURCE_SMCLK,
+        .bitOrder = EUSCI_A_UART_LSB_FIRST,
+        .numBaudrateEntries = sizeof(uartMSP432Baudrates) /
+                              sizeof(UARTMSP432_BaudrateConfig),
+        .baudrateLUT = uartMSP432Baudrates,
+        .ringBufPtr  = uartMSP432RingBuffer3,
+        .ringBufSize = sizeof(uartMSP432RingBuffer3),
+        .rxPin = UARTMSP432_P9_6_UCA3RXD,
+        .txPin = UARTMSP432_P9_7_UCA3TXD
+    },
+#endif
 };
 
 const UART_Config UART_config[] = {
     {
         .fxnTablePtr = &myUARTMSP432_fxnTable,
-        .object = &uartMSP432Objects[0],
-        .hwAttrs = &uartMSP432HWAttrs[0]
+        .object = &uartMSP432Objects[Board_UARTA0],
+        .hwAttrs = &uartMSP432HWAttrs[Board_UARTA0]
     },
+
     {
         .fxnTablePtr = &myUARTMSP432_fxnTable,
-        .object = &uartMSP432Objects[1],
-        .hwAttrs = &uartMSP432HWAttrs[1]
+        .object = &uartMSP432Objects[Board_UARTA2],
+        .hwAttrs = &uartMSP432HWAttrs[Board_UARTA2]
     },
+
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+    {
+        .fxnTablePtr = &myUARTMSP432_fxnTable,
+        .object = &uartMSP432Objects[Board_UARTA1],
+        .hwAttrs = &uartMSP432HWAttrs[Board_UARTA1]
+    },
+#endif
+
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+    {
+        .fxnTablePtr = &myUARTMSP432_fxnTable,
+        .object = &uartMSP432Objects[Board_UARTA3],
+        .hwAttrs = &uartMSP432HWAttrs[Board_UARTA3]
+    },
+#endif
 };
 
 const uint_least8_t UART_count = Board_UARTCOUNT;

@@ -34,6 +34,8 @@
 
 #include <ti/drivers/UART.h>
 
+#include "Board.h"
+
 void uartReadCallback(UART_Handle uart, void *buf, size_t count)
 {
     Serial.readCallback(uart, buf, count);
@@ -43,6 +45,23 @@ void uartReadCallback1(UART_Handle uart, void *buf, size_t count)
 {
     Serial1.readCallback(uart, buf, count);
 }
+
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+void uartReadCallback2(UART_Handle uart, void *buf, size_t count)
+{
+    Serial2.readCallback(uart, buf, count);
+}
+#endif
+
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+void uartReadCallback3(UART_Handle uart, void *buf, size_t count)
+{
+    Serial3.readCallback(uart, buf, count);
+}
+#endif
+
+
+
 
 void uartWriteCallback(UART_Handle uart, void *buf, size_t count)
 {
@@ -54,11 +73,32 @@ void uartWriteCallback1(UART_Handle uart, void *buf, size_t count)
     Serial1.writeCallback(uart, buf, count);
 }
 
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+void uartWriteCallback2(UART_Handle uart, void *buf, size_t count)
+{
+    Serial2.writeCallback(uart, buf, count);
+}
+#endif
+
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+void uartWriteCallback3(UART_Handle uart, void *buf, size_t count)
+{
+    Serial3.writeCallback(uart, buf, count);
+}
+#endif
+
+
 /*
  * Pre-Initialize Serial instances
  */
-HardwareSerial Serial(0, uartReadCallback, uartWriteCallback);
-HardwareSerial Serial1(1, uartReadCallback1, uartWriteCallback1);
+HardwareSerial Serial(Board_UARTA0, uartReadCallback, uartWriteCallback);
+HardwareSerial Serial1(Board_UARTA2, uartReadCallback1, uartWriteCallback1);
+
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+HardwareSerial Serial2(Board_UARTA1, uartReadCallback2, uartWriteCallback2);
+#endif
 
 
-
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+HardwareSerial Serial3(Board_UARTA3, uartReadCallback3, uartWriteCallback3);
+#endif

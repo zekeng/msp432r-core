@@ -412,6 +412,16 @@ void serialEvent() { }
 void serialEvent1() __attribute__((weak));
 void serialEvent1() { }
 
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+void serialEvent2() __attribute__((weak));
+void serialEvent2() { }
+#endif
+
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+void serialEvent3() __attribute__((weak));
+void serialEvent3() { }
+#endif
+
 void serialEventRun(void)
 {
     if (Serial.available()) {
@@ -425,3 +435,22 @@ void serialEventRun1(void)
         serialEvent1();
     }
 }
+
+
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+void serialEventRun2(void)
+{
+    if (Serial2.available()) {
+        serialEvent2();
+    }
+}
+#endif
+
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+void serialEventRun3(void)
+{
+    if (Serial3.available()) {
+        serialEvent3();
+    }
+}
+#endif
