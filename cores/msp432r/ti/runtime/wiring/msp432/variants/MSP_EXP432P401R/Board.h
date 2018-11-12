@@ -177,8 +177,16 @@ typedef enum Board_TimerName {
  *  @brief  Enum of UART names on the MSP_EXP432P401R Launch Pad dev board
  */
 typedef enum Board_UARTName {
-    Board_UARTA0 = 0,
-    Board_UARTA2,
+    Board_UARTA0 = 0, // Serial0
+    Board_UARTA2, // Serial1
+
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+    Board_UARTA1, // Serial2
+#endif
+
+#ifdef ENERGIA_BOARD_SERIAL3_ENABLE
+    Board_UARTA3, // Serial3
+#endif
 
     Board_UARTCOUNT
 } Board_UARTName;
