@@ -410,14 +410,14 @@ void stopAnalogRead(uint8_t pin)
 
     /* Close PWM port */
     ADC_close((ADC_Handle)&(ADC_config[adcIndex]));
-
+#if(0) // TODO check this - looks too much
     port = (GPIOMSP432_config.pinConfigs[pin] & 0xffff) >> 8;
     pinMask = GPIOMSP432_config.pinConfigs[pin] & 0xff;
 
     /* Place Pin in NORMAL GPIO mode */
     MAP_GPIO_setAsPeripheralModuleFunctionOutputPin(port, pinMask,
                                                  GPIO_PRIMARY_MODULE_FUNCTION);
-
+#endif
     digital_pin_to_pin_function[pin] = PIN_FUNC_UNUSED;
 }
 
