@@ -31,9 +31,10 @@
  */
 
 #include <ti/runtime/wiring/SPI.h>
+#include "Board.h"
 
 /*
  * Pre-Initialize SPI instances
  */
-SPIClass SPI(0);
-SPIClass SPI1(1);
+SPIClass SPI(Board_SPIB0);
+SPIClass SPI1(Board_SPIB2);
