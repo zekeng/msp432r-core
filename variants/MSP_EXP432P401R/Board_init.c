@@ -1292,8 +1292,8 @@ const UARTMSP432_HWAttrsV1 uartMSP432HWAttrs[Board_UARTCOUNT] = {
         .baudrateLUT = uartMSP432Baudrates,
         .ringBufPtr  = uartMSP432RingBuffer2,
         .ringBufSize = sizeof(uartMSP432RingBuffer2),
-        .rxPin = UARTMSP432_P2_4_UCA1RXD,
-        .txPin = UARTMSP432_P2_5_UCA1TXD
+        .rxPin = UARTMSP432_P2_2_UCA1RXD,
+        .txPin = UARTMSP432_P2_3_UCA1TXD
     },
 #endif
 
