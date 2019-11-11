@@ -502,6 +502,11 @@ GPIO_PinConfig gpioPinConfigs[] = {
     GPIOMSP432_P2_1 | GPIO_DO_NOT_CONFIG,       /*  76 - P2.1 GREEN_LED */
     GPIOMSP432_P2_2 | GPIO_DO_NOT_CONFIG,       /*  77 - P2.2 BLUE_LED */
     GPIOMSP432_P1_0 | GPIO_DO_NOT_CONFIG,       /*  78 - P1.0 LED1 */
+
+    /* unused by Energia pins 79-81 */
+    GPIOMSP432_P8_1 | GPIO_DO_NOT_CONFIG,       /*  79 - P8.1 */
+    GPIOMSP432_P3_1 | GPIO_DO_NOT_CONFIG,       /*  80 - P3.1 */
+    GPIOMSP432_P3_4 | GPIO_DO_NOT_CONFIG,       /*  81 - P3.4 */
 };
 
 /*
@@ -606,6 +611,11 @@ GPIO_CallbackFxn gpioCallbackFunctions[] = {
     NULL,  /*  76 - P2.1 GREEN_LED */
     NULL,  /*  77 - P2.2 BLUE_LED */
     NULL,  /*  78 - P1.0 LED1 */
+
+    /* unused by Energia pins 79-81 */
+    NULL,  /*  79 - P8.1 */
+    NULL,  /*  80 - P3.1 */
+    NULL,  /*  80 - P3.4 */
 };
 
 /* The device-specific GPIO_config structure */

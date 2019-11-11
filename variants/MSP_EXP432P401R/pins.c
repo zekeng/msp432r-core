@@ -128,6 +128,11 @@ uint8_t digital_pin_to_pin_function[] = {
     PIN_FUNC_UNUSED,    /*  76 - P2.1 GREEN_LED */
     PIN_FUNC_UNUSED,    /*  77 - P2.2 BLUE_LED */
     PIN_FUNC_UNUSED,    /*  78 - P1.0 LED1 */
+
+    /* unused by Energia pins 79-81 */
+    PIN_FUNC_UNUSED,    /*  79 - P8.1 */
+    PIN_FUNC_UNUSED,    /*  80 - P3.1 */
+    PIN_FUNC_UNUSED,    /*  81 - P3.4 */
 };
 
 /*
@@ -229,6 +234,11 @@ uint8_t digital_pin_to_pwm_index[] = {
     PWM_MAPPABLE,           /*  76 - P2.1 GREEN_LED */
     PWM_MAPPABLE,           /*  77 - P2.2 BLUE_LED */
     PWM_NOT_MAPPABLE,       /*  78 - P1.0 LED1 */
+
+    /* unused by Energia pins 79-81 */
+    PWM_NOT_MAPPABLE,       /*  79 - P8.1 */
+    PWM_NOT_MAPPABLE,       /*  80 - P3.1 */
+    PWM_NOT_MAPPABLE,       /*  81 - P3.4 */
 };
 
 /*
@@ -329,5 +339,10 @@ const uint8_t digital_pin_to_adc_index[] = {
     NOT_ON_ADC,     /*  76 - P2.1 GREEN_LED */
     NOT_ON_ADC,     /*  77 - P2.2 BLUE_LED */
     NOT_ON_ADC,     /*  78 - P1.0 LED1 */
+
+    /* unused by Energia pins 79-81 */
+    NOT_ON_ADC,     /*  79 - P8.1 */
+    NOT_ON_ADC,     /*  80 - P3.1 */
+    NOT_ON_ADC,     /*  81 - P3.4 */
 };
 
