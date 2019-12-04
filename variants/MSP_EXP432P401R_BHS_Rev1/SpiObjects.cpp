@@ -37,4 +37,3 @@
  * Pre-Initialize SPI instances
  */
 SPIClass SPI(Board_SPIB0);
-SPIClass SPI1(Board_SPIB2);

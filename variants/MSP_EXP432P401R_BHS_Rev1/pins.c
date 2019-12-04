@@ -41,98 +41,49 @@
 
 uint8_t digital_pin_to_pin_function[] = {
     PIN_FUNC_UNUSED,    /*  dummy */
-    PIN_FUNC_UNUSED,    /*  1  - 3.3V */
-    PIN_FUNC_UNUSED,    /*  2  - P6.0_A15 */
-    PIN_FUNC_UNUSED,    /*  3  - P3.2_URXD */
-    PIN_FUNC_UNUSED,    /*  4  - P3.3_UTXD */
-    PIN_FUNC_UNUSED,    /*  5  - P4.1_IO_A12 */
-    PIN_FUNC_UNUSED,    /*  6  - P4.3_A10 */
-    PIN_FUNC_UNUSED,    /*  7  - P1.5_SPICLK */
-    PIN_FUNC_UNUSED,    /*  8  - P4.6_IO_A7 */
-    PIN_FUNC_UNUSED,    /*  9  - P6.5_I2CSCL */
-    PIN_FUNC_UNUSED,    /*  10 - P6.4_I2CSDA */
 
-    PIN_FUNC_UNUSED,    /*  11 - P3.6_IO */
-    PIN_FUNC_UNUSED,    /*  12 - P5.2_IO */
-    PIN_FUNC_UNUSED,    /*  13 - P5.0_IO */
-    PIN_FUNC_UNUSED,    /*  14 - P1.7_SPIMISO */
-    PIN_FUNC_UNUSED,    /*  15 - P1.6_SPIMOSI */
-    PIN_FUNC_UNUSED,    /*  16 - RESET */
-    PIN_FUNC_UNUSED,    /*  17 - P5.7_IO */
-    PIN_FUNC_UNUSED,    /*  18 - P3.0_IO */
-    PIN_FUNC_UNUSED,    /*  19 - P2.5_IO_PWM */
-    PIN_FUNC_UNUSED,    /*  20 - GND */
-
-    PIN_FUNC_UNUSED,    /*  21 - 5V */
-    PIN_FUNC_UNUSED,    /*  22 - GND */
-    PIN_FUNC_UNUSED,    /*  23 - P6.1_A14 */
-    PIN_FUNC_UNUSED,    /*  24 - P4.0_A13 */
-    PIN_FUNC_UNUSED,    /*  25 - P4.2_A11 */
-    PIN_FUNC_UNUSED,    /*  26 - P4.4_A9 */
-    PIN_FUNC_UNUSED,    /*  27 - P4.5_A8 */
-    PIN_FUNC_UNUSED,    /*  28 - P4.7_A6 */
-    PIN_FUNC_UNUSED,    /*  29 - P5.4_IO */
-    PIN_FUNC_UNUSED,    /*  30 - P5.5_IO */
-
-    PIN_FUNC_UNUSED,    /*  31 - P3.7_IO */
-    PIN_FUNC_UNUSED,    /*  32 - P3.5_IO */
-    PIN_FUNC_UNUSED,    /*  33 - P5.1_IO */
-    PIN_FUNC_UNUSED,    /*  34 - P2.3_IO */
-    PIN_FUNC_UNUSED,    /*  35 - P6.7_IO_CAPT */
-    PIN_FUNC_UNUSED,    /*  36 - P6.6_IO_CAPT */
-    PIN_FUNC_UNUSED,    /*  37 - P5.6_PWM */
-    PIN_FUNC_UNUSED,    /*  38 - P2.4_PWM */
-    PIN_FUNC_UNUSED,    /*  39 - P2.6_PWM */
-    PIN_FUNC_UNUSED,    /*  40 - P2.7_PWM */
-
-    /* pins 41-56 */
-    PIN_FUNC_UNUSED,    /*  41 - P8.5 */
-    PIN_FUNC_UNUSED,    /*  42 - P9.0 */
-    PIN_FUNC_UNUSED,    /*  43 - P8.4 */
-    PIN_FUNC_UNUSED,    /*  44 - P8.2 */
-    PIN_FUNC_UNUSED,    /*  45 - P9.2 */
-    PIN_FUNC_UNUSED,    /*  46 - P6.2 */
-    PIN_FUNC_UNUSED,    /*  47 - P7.3 */
-    PIN_FUNC_UNUSED,    /*  48 - P7.1 */
-    PIN_FUNC_UNUSED,    /*  49 - P9.4 */
-    PIN_FUNC_UNUSED,    /*  40 - P9.6 */
-    PIN_FUNC_UNUSED,    /*  51 - P8.0 */
-    PIN_FUNC_UNUSED,    /*  52 - P7.4 */
-    PIN_FUNC_UNUSED,    /*  53 - P7.6 */
-    PIN_FUNC_UNUSED,    /*  54 - P10.0 */
-    PIN_FUNC_UNUSED,    /*  55 - P10_2 */
-    PIN_FUNC_UNUSED,    /*  56 - P10.4 */
-
-    /* pins 57-72 */
-    PIN_FUNC_UNUSED,    /*  57 - P8.6 */
-    PIN_FUNC_UNUSED,    /*  58 - P8.7 */
-    PIN_FUNC_UNUSED,    /*  59 - P9.1 */
-    PIN_FUNC_UNUSED,    /*  60 - P8.3 */
-    PIN_FUNC_UNUSED,    /*  61 - P5.3 */
-    PIN_FUNC_UNUSED,    /*  62 - P9.3 */
-    PIN_FUNC_UNUSED,    /*  63 - P6.3 */
-    PIN_FUNC_UNUSED,    /*  64 - P7.2 */
-    PIN_FUNC_UNUSED,    /*  65 - P7.0 */
-    PIN_FUNC_UNUSED,    /*  66 - P9.5 */
-    PIN_FUNC_UNUSED,    /*  67 - P9.7 */
-    PIN_FUNC_UNUSED,    /*  68 - P7.5 */
-    PIN_FUNC_UNUSED,    /*  69 - P7.7 */
-    PIN_FUNC_UNUSED,    /*  70 - P10.1 */
-    PIN_FUNC_UNUSED,    /*  71 - P10.3 */
-    PIN_FUNC_UNUSED,    /*  72 - P10.5 */
-
-    /* virtual pins 73-78 */
-    PIN_FUNC_UNUSED,    /*  73 - P1.1 SW1 */
-    PIN_FUNC_UNUSED,    /*  74 - P1.4 SW2 */
-    PIN_FUNC_UNUSED,    /*  75 - P2.0 RED_LED */
-    PIN_FUNC_UNUSED,    /*  76 - P2.1 GREEN_LED */
-    PIN_FUNC_UNUSED,    /*  77 - P2.2 BLUE_LED */
-    PIN_FUNC_UNUSED,    /*  78 - P1.0 LED1 */
-
-    /* unused by Energia pins 79-81 */
-    PIN_FUNC_UNUSED,    /*  79 - P8.1 */
-    PIN_FUNC_UNUSED,    /*  80 - P3.1 */
-    PIN_FUNC_UNUSED,    /*  81 - P3.4 */
+    PIN_FUNC_UNUSED,    /*  1 - BUTTON1 - User Button 1 */
+    PIN_FUNC_UNUSED,    /*  2 - BUTTON2 - User Button 2 */
+    PIN_FUNC_UNUSED,    /*  3 - BCLUART_RXD - Debug Serial RX */
+    PIN_FUNC_UNUSED,    /*  4 - BCLUART_TXD - Debug Serial TX */
+    PIN_FUNC_UNUSED,    /*  5 - FL_SPI_CS# - FLASH Chip Select (active low) */
+    PIN_FUNC_UNUSED,    /*  6 - FL_SPI_CLK - FLASH SPI CLOCK */
+    PIN_FUNC_UNUSED,    /*  7 - FL_SPI_MOSI - FLASH Master Output Slave Input */
+    PIN_FUNC_UNUSED,    /*  8 - FL_SPI_MISO - FLASH Master Input Slave Output */
+    PIN_FUNC_UNUSED,    /*  9 - SIM800_UART_CTS - SIM800 UART CTS */
+    PIN_FUNC_UNUSED,    /* 10 - SIM800_UART_RTS - SIM800 UART RTS */
+    PIN_FUNC_UNUSED,    /* 11 - SIM800_UART_RX - SIM800 UART RX */
+    PIN_FUNC_UNUSED,    /* 12 - SIM800_UART_TX - SIM800 UART TX */
+    PIN_FUNC_UNUSED,    /* 13 - A1_PD_SCK - SENSOR A1 CLOCK */
+    PIN_FUNC_UNUSED,    /* 14 - B1_PD_SCK - SENSOR B1 CLOCK */
+    PIN_FUNC_UNUSED,    /* 15 - BT_RXD - Bluetooth UART RX */
+    PIN_FUNC_UNUSED,    /* 16 - BT_TXD - Bluetooth UART TX */
+    PIN_FUNC_UNUSED,    /* 17 - GSM_PWR_EN - GSM Power Enable */
+    PIN_FUNC_UNUSED,    /* 18 - SIM800_PWR_ON - SIM800 Power On */
+    PIN_FUNC_UNUSED,    /* 19 - BT_GPIO1 - Bluetooth GPIO1 */
+    PIN_FUNC_UNUSED,    /* 20 - BT_GPIO2 - Bluetooth GPIO2 */
+    PIN_FUNC_UNUSED,    /* 21 - SIM800_RING - SIM800 RING */
+    PIN_FUNC_UNUSED,    /* 22 - SIM800_NET_STAT - SIM800 NET STATUS */
+    PIN_FUNC_UNUSED,    /* 23 - SIM800_STAT - SIM800 STATUS */
+    PIN_FUNC_UNUSED,    /* 24 - SIM800_DCD - SIM800 DCD */
+    PIN_FUNC_UNUSED,    /* 25 - SIM800_PWR_MON - SIM800 Power Monitor */
+    PIN_FUNC_UNUSED,    /* 26 - A2_PD_SCK - Sensor A2 CLOCK */
+    PIN_FUNC_UNUSED,    /* 27 - A1_DOUT - Sensor A1 Digital OUTPUT */
+    PIN_FUNC_UNUSED,    /* 28 - B1_DOUT - Sensor B1 Digital OUTPUT */
+    PIN_FUNC_UNUSED,    /* 29 - A2_DOUT - Sensor A2 Digital OUTPUT */
+    PIN_FUNC_UNUSED,    /* 30 - B2_DOUT - Sensor B2 Digital OUTPUT */
+    PIN_FUNC_UNUSED,    /* 31 - TMP_ALERT - TMP1075 Alert Pin */
+    PIN_FUNC_UNUSED,    /* 32 - Vbat_MSRMNT - Vbatt Measurement Signal */
+    PIN_FUNC_UNUSED,    /* 33 - EN3V3 - 3.3V Enable Pin */
+    PIN_FUNC_UNUSED,    /* 34 - EN_Vbat_SW - Vbatt Enable */
+    PIN_FUNC_UNUSED,    /* 35 - I2C_SDA - TMP1075 SDA */
+    PIN_FUNC_UNUSED,    /* 36 - I2C_SCL - TMP1075 SCL */
+    PIN_FUNC_UNUSED,    /* 37 - DQ1 DS18B20 - Data Pin (not used) */
+    PIN_FUNC_UNUSED,    /* 38 - DQ2 DS18B20 - Data Pin (not used) */
+    PIN_FUNC_UNUSED,    /* 39 - LED_RED - Red LED */
+    PIN_FUNC_UNUSED,    /* 40 - LED_GREEN - Green LED */
+    PIN_FUNC_UNUSED,    /* 41 - CLEAR_WDT - External WDT Clear Pin */
+    PIN_FUNC_UNUSED     /* 42 - B2_PD_SCK - SENSOR B2 CLOCK */
 };
 
 /*
@@ -147,98 +98,49 @@ uint8_t digital_pin_to_pin_function[] = {
  */
 uint8_t digital_pin_to_pwm_index[] = {
     PWM_NOT_MAPPABLE,       /*  dummy */
-    PWM_NOT_MAPPABLE,       /*  1  - 3.3V */
-    PWM_NOT_MAPPABLE,       /*  2  - P6.0_A15 */
-    PWM_MAPPABLE,           /*  3  - P3.2_URXD */
-    PWM_MAPPABLE,           /*  4  - P3.3_UTXD */
-    PWM_NOT_MAPPABLE,       /*  5  - P4.1_IO_A12 */
-    PWM_NOT_MAPPABLE,       /*  6  - P4.3_A10 */
-    PWM_NOT_MAPPABLE,       /*  7  - P1.5_SPICLK */
-    PWM_NOT_MAPPABLE,       /*  8  - P4.6_IO_A7 */
-    PWM_NOT_MAPPABLE,       /*  9  - P6.5_I2CSCL */
-    PWM_NOT_MAPPABLE,       /*  10 - P6.4_I2CSDA */
 
-    PWM_MAPPABLE,           /*  11 - P3.6_IO */
-    PWM_NOT_MAPPABLE,       /*  12 - P5.2_IO */
-    PWM_NOT_MAPPABLE,       /*  13 - P5.0_IO */
-    PWM_NOT_MAPPABLE,       /*  14 - P1.7_SPIMISO */
-    PWM_NOT_MAPPABLE,       /*  15 - P1.6_SPIMOSI */
-    PWM_NOT_MAPPABLE,       /*  16 - RESET */
-    PWM_FIXED_INDEX_9,      /*  17 - P5.7_IO */
-    PWM_MAPPABLE,           /*  18 - P3.0_IO */
-    PWM_MAPPABLE,           /*  19 - P2.5_IO_PWM */
-    PWM_NOT_MAPPABLE,       /*  20 - GND */
-
-    PWM_NOT_MAPPABLE,       /*  21 - 5V */
-    PWM_NOT_MAPPABLE,       /*  22 - GND */
-    PWM_NOT_MAPPABLE,       /*  23 - P6.1_A14 */
-    PWM_NOT_MAPPABLE,       /*  24 - P4.0_A13 */
-    PWM_NOT_MAPPABLE,       /*  25 - P4.2_A11 */
-    PWM_NOT_MAPPABLE,       /*  26 - P4.4_A9 */
-    PWM_NOT_MAPPABLE,       /*  27 - P4.5_A8 */
-    PWM_NOT_MAPPABLE,       /*  28 - P4.7_A6 */
-    PWM_NOT_MAPPABLE,       /*  29 - P5.4_IO */
-    PWM_NOT_MAPPABLE,       /*  30 - P5.5_IO */
-
-    PWM_MAPPABLE,           /*  31 - P3.7_IO */
-    PWM_MAPPABLE,           /*  32 - P3.5_IO */
-    PWM_NOT_MAPPABLE,       /*  33 - P5.1_IO */
-    PWM_MAPPABLE,           /*  34 - P2.3_IO */
-    PWM_FIXED_INDEX_11,     /*  35 - P6.7_IO_CAPT */
-    PWM_FIXED_INDEX_10,     /*  36 - P6.6_IO_CAPT */
-    PWM_FIXED_INDEX_8,      /*  37 - P5.6_PWM */
-    PWM_MAPPABLE,           /*  38 - P2.4_PWM */
-    PWM_MAPPABLE,           /*  39 - P2.6_PWM */
-    PWM_MAPPABLE,           /*  40 - P2.7_PWM */
-
-    /* pins 41-56 */
-    PWM_NOT_MAPPABLE,       /*  41 - P8.5 */
-    PWM_NOT_MAPPABLE,       /*  42 - P9.0 */
-    PWM_NOT_MAPPABLE,       /*  43 - P8.4 */
-    PWM_NOT_MAPPABLE,       /*  44 - P8.2 */
-    PWM_NOT_MAPPABLE,       /*  45 - P9.2 */
-    PWM_NOT_MAPPABLE,       /*  46 - P6.2 */
-    PWM_MAPPABLE,           /*  47 - P7.3 */
-    PWM_MAPPABLE,           /*  48 - P7.1 */
-    PWM_NOT_MAPPABLE,       /*  49 - P9.4 */
-    PWM_NOT_MAPPABLE,       /*  40 - P9.6 */
-    PWM_NOT_MAPPABLE,       /*  51 - P8.0 */
-    PWM_MAPPABLE,           /*  52 - P7.4 */
-    PWM_MAPPABLE,           /*  53 - P7.6 */
-    PWM_NOT_MAPPABLE,       /*  54 - P10.0 */
-    PWM_NOT_MAPPABLE,       /*  55 - P10_2 */
-    PWM_NOT_MAPPABLE,       /*  56 - P10.4 */
-
-    /* pins 57-72 */
-    PWM_NOT_MAPPABLE,       /*  57 - P8.6 */
-    PWM_NOT_MAPPABLE,       /*  58 - P8.7 */
-    PWM_NOT_MAPPABLE,       /*  59 - P9.1 */
-    PWM_NOT_MAPPABLE,       /*  60 - P8.3 */
-    PWM_NOT_MAPPABLE,       /*  61 - P5.3 */
-    PWM_NOT_MAPPABLE,       /*  62 - P9.3 */
-    PWM_NOT_MAPPABLE,       /*  63 - P6.3 */
-    PWM_MAPPABLE,           /*  64 - P7.2 */
-    PWM_MAPPABLE,           /*  65 - P7.0 */
-    PWM_NOT_MAPPABLE,       /*  66 - P9.5 */
-    PWM_NOT_MAPPABLE,       /*  67 - P9.7 */
-    PWM_MAPPABLE,           /*  68 - P7.5 */
-    PWM_MAPPABLE,           /*  69 - P7.7 */
-    PWM_NOT_MAPPABLE,       /*  70 - P10.1 */
-    PWM_NOT_MAPPABLE,       /*  71 - P10.3 */
-    PWM_NOT_MAPPABLE,       /*  72 - P10.5 */
-
-    /* virtual pins 73-78 */
-    PWM_NOT_MAPPABLE,       /*  73 - P1.1 SW1 */
-    PWM_NOT_MAPPABLE,       /*  74 - P1.4 SW2 */
-    PWM_MAPPABLE,           /*  75 - P2.0 RED_LED */
-    PWM_MAPPABLE,           /*  76 - P2.1 GREEN_LED */
-    PWM_MAPPABLE,           /*  77 - P2.2 BLUE_LED */
-    PWM_NOT_MAPPABLE,       /*  78 - P1.0 LED1 */
-
-    /* unused by Energia pins 79-81 */
-    PWM_NOT_MAPPABLE,       /*  79 - P8.1 */
-    PWM_NOT_MAPPABLE,       /*  80 - P3.1 */
-    PWM_NOT_MAPPABLE,       /*  81 - P3.4 */
+    PWM_NOT_MAPPABLE,    /*  1 - BUTTON1 - User Button 1 */
+    PWM_NOT_MAPPABLE,    /*  2 - BUTTON2 - User Button 2 */
+    PWM_NOT_MAPPABLE,    /*  3 - BCLUART_RXD - Debug Serial RX */
+    PWM_NOT_MAPPABLE,    /*  4 - BCLUART_TXD - Debug Serial TX */
+    PWM_NOT_MAPPABLE,    /*  5 - FL_SPI_CS# - FLASH Chip Select (active low) */
+    PWM_NOT_MAPPABLE,    /*  6 - FL_SPI_CLK - FLASH SPI CLOCK */
+    PWM_NOT_MAPPABLE,    /*  7 - FL_SPI_MOSI - FLASH Master Output Slave Input */
+    PWM_NOT_MAPPABLE,    /*  8 - FL_SPI_MISO - FLASH Master Input Slave Output */
+    PWM_NOT_MAPPABLE,    /*  9 - SIM800_UART_CTS - SIM800 UART CTS */
+    PWM_NOT_MAPPABLE,    /* 10 - SIM800_UART_RTS - SIM800 UART RTS */
+    PWM_NOT_MAPPABLE,    /* 11 - SIM800_UART_RX - SIM800 UART RX */
+    PWM_NOT_MAPPABLE,    /* 12 - SIM800_UART_TX - SIM800 UART TX */
+    PWM_NOT_MAPPABLE,    /* 13 - A1_PD_SCK - SENSOR A1 CLOCK */
+    PWM_NOT_MAPPABLE,    /* 14 - B1_PD_SCK - SENSOR B1 CLOCK */
+    PWM_NOT_MAPPABLE,    /* 15 - BT_RXD - Bluetooth UART RX */
+    PWM_NOT_MAPPABLE,    /* 16 - BT_TXD - Bluetooth UART TX */
+    PWM_NOT_MAPPABLE,    /* 17 - GSM_PWR_EN - GSM Power Enable */
+    PWM_NOT_MAPPABLE,    /* 18 - SIM800_PWR_ON - SIM800 Power On */
+    PWM_NOT_MAPPABLE,    /* 19 - BT_GPIO1 - Bluetooth GPIO1 */
+    PWM_NOT_MAPPABLE,    /* 20 - BT_GPIO2 - Bluetooth GPIO2 */
+    PWM_NOT_MAPPABLE,    /* 21 - SIM800_RING - SIM800 RING */
+    PWM_NOT_MAPPABLE,    /* 22 - SIM800_NET_STAT - SIM800 NET STATUS */
+    PWM_NOT_MAPPABLE,    /* 23 - SIM800_STAT - SIM800 STATUS */
+    PWM_NOT_MAPPABLE,    /* 24 - SIM800_DCD - SIM800 DCD */
+    PWM_NOT_MAPPABLE,    /* 25 - SIM800_PWR_MON - SIM800 Power Monitor */
+    PWM_NOT_MAPPABLE,    /* 26 - A2_PD_SCK - Sensor A2 CLOCK */
+    PWM_NOT_MAPPABLE,    /* 27 - A1_DOUT - Sensor A1 Digital OUTPUT */
+    PWM_NOT_MAPPABLE,    /* 28 - B1_DOUT - Sensor B1 Digital OUTPUT */
+    PWM_NOT_MAPPABLE,    /* 29 - A2_DOUT - Sensor A2 Digital OUTPUT */
+    PWM_NOT_MAPPABLE,    /* 30 - B2_DOUT - Sensor B2 Digital OUTPUT */
+    PWM_NOT_MAPPABLE,    /* 31 - TMP_ALERT - TMP1075 Alert Pin */
+    PWM_NOT_MAPPABLE,    /* 32 - Vbat_MSRMNT - Vbatt Measurement Signal */
+    PWM_NOT_MAPPABLE,    /* 33 - EN3V3 - 3.3V Enable Pin */
+    PWM_NOT_MAPPABLE,    /* 34 - EN_Vbat_SW - Vbatt Enable */
+    PWM_NOT_MAPPABLE,    /* 35 - I2C_SDA - TMP1075 SDA */
+    PWM_NOT_MAPPABLE,    /* 36 - I2C_SCL - TMP1075 SCL */
+    PWM_NOT_MAPPABLE,    /* 37 - DQ1 DS18B20 - Data Pin (not used) */
+    PWM_NOT_MAPPABLE,    /* 38 - DQ2 DS18B20 - Data Pin (not used) */
+    PWM_NOT_MAPPABLE,    /* 39 - LED_RED - Red LED */
+    PWM_NOT_MAPPABLE,    /* 40 - LED_GREEN - Green LED */
+    PWM_NOT_MAPPABLE,    /* 41 - CLEAR_WDT - External WDT Clear Pin */
+    PWM_NOT_MAPPABLE     /* 42 - B2_PD_SCK - SENSOR B2 CLOCK */
 };
 
 /*
@@ -248,101 +150,47 @@ const uint8_t digital_pin_to_adc_index[] = {
     /* port_pin */
     NOT_ON_ADC,     /*  dummy */
 
-    /* pins 1-10 */
-    NOT_ON_ADC,     /*  1  - 3.3V */
-    15,             /*  2  - P6.0_A15 */
-    NOT_ON_ADC,     /*  3  - P3.2_URXD */
-    NOT_ON_ADC,     /*  4  - P3.3_UTXD */
-    12,             /*  5  - P4.1_IO_A12 */
-    10,             /*  6  - P4.3_A10 */
-    NOT_ON_ADC,     /*  7  - P1.5_SPICLK */
-    7,              /*  8  - P4.6_IO_A7 */
-    NOT_ON_ADC,     /*  9  - P6.5_I2CSCL */
-    NOT_ON_ADC,     /*  10 - P6.4_I2CSDA */
-
-    /* pins 11-20 */
-    NOT_ON_ADC,     /*  11 - P3.6_IO */
-    3,              /*  12 - P5.2_IO */
-    5,              /*  13 - P5.0_IO */
-    NOT_ON_ADC,     /*  14 - P1.7_SPIMISO */
-    NOT_ON_ADC,     /*  15 - P1.6_SPIMOSI */
-    NOT_ON_ADC,     /*  16 - RESET */
-    NOT_ON_ADC,     /*  17 - P5.7_IO */
-    NOT_ON_ADC,     /*  18 - P3.0_IO */
-    NOT_ON_ADC,     /*  19 - P2.5_IO_PWM */
-    NOT_ON_ADC,     /*  20 - GND */
-
-    /* pins 21-30 */
-    NOT_ON_ADC,     /*  21 - 5V */
-    NOT_ON_ADC,     /*  22 - GND */
-    14,             /*  23 - P6.1_A14 */
-    13,             /*  24 - P4.0_A13 */
-    11,             /*  25 - P4.2_A11 */
-    9,              /*  26 - P4.4_A9 */
-    8,              /*  27 - P4.5_A8 */
-    6,              /*  28 - P4.7_A6 */
-    1,              /*  29 - P5.4_IO */
-    0,              /*  30 - P5.5_IO */
-
-    /* pins 31-40 */
-    NOT_ON_ADC,     /*  31 - P3.7_IO */
-    NOT_ON_ADC,     /*  32 - P3.5_IO */
-    4,              /*  33 - P5.1_IO */
-    NOT_ON_ADC,     /*  34 - P2.3_IO */
-    NOT_ON_ADC,     /*  35 - P6.7_IO_CAPT */
-    NOT_ON_ADC,     /*  36 - P6.6_IO_CAPT */
-    NOT_ON_ADC,     /*  37 - P5.6_PWM */
-    NOT_ON_ADC,     /*  38 - P2.4_PWM */
-    NOT_ON_ADC,     /*  39 - P2.6_PWM */
-    NOT_ON_ADC,     /*  40 - P2.7_PWM */
-
-    /* pins 41-56 */
-    20,             /*  41 - P8.5 */
-    17,             /*  42 - P9.0 */
-    21,             /*  43 - P8.4 */
-    23,             /*  44 - P8.2 */
-    NOT_ON_ADC,     /*  45 - P9.2 */
-    NOT_ON_ADC,     /*  46 - P6.2 */
-    NOT_ON_ADC,     /*  47 - P7.3 */
-    NOT_ON_ADC,     /*  48 - P7.1 */
-    NOT_ON_ADC,     /*  49 - P9.4 */
-    NOT_ON_ADC,     /*  40 - P9.6 */
-    NOT_ON_ADC,     /*  51 - P8.0 */
-    NOT_ON_ADC,     /*  52 - P7.4 */
-    NOT_ON_ADC,     /*  53 - P7.6 */
-    NOT_ON_ADC,     /*  54 - P10.0 */
-    NOT_ON_ADC,     /*  55 - P10_2 */
-    NOT_ON_ADC,     /*  56 - P10.4 */
-
-    /* pins 57-72 */
-    19,             /*  57 - P8.6 */
-    18,             /*  58 - P8.7 */
-    16,             /*  59 - P9.1 */
-    22,             /*  60 - P8.3 */
-    2,              /*  61 - P5.3 */
-    NOT_ON_ADC,     /*  62 - P9.3 */
-    NOT_ON_ADC,     /*  63 - P6.3 */
-    NOT_ON_ADC,     /*  64 - P7.2 */
-    NOT_ON_ADC,     /*  65 - P7.0 */
-    NOT_ON_ADC,     /*  66 - P9.5 */
-    NOT_ON_ADC,     /*  67 - P9.7 */
-    NOT_ON_ADC,     /*  68 - P7.5 */
-    NOT_ON_ADC,     /*  69 - P7.7 */
-    NOT_ON_ADC,     /*  70 - P10.1 */
-    NOT_ON_ADC,     /*  71 - P10.3 */
-    NOT_ON_ADC,     /*  72 - P10.5 */
-
-    /* virtual pins 73-78 */
-    NOT_ON_ADC,     /*  73 - P1.1 SW1 */
-    NOT_ON_ADC,     /*  73 - P1.4 SW2 */
-    NOT_ON_ADC,     /*  75 - P2.0 RED_LED */
-    NOT_ON_ADC,     /*  76 - P2.1 GREEN_LED */
-    NOT_ON_ADC,     /*  77 - P2.2 BLUE_LED */
-    NOT_ON_ADC,     /*  78 - P1.0 LED1 */
-
-    /* unused by Energia pins 79-81 */
-    NOT_ON_ADC,     /*  79 - P8.1 */
-    NOT_ON_ADC,     /*  80 - P3.1 */
-    NOT_ON_ADC,     /*  81 - P3.4 */
+    NOT_ON_ADC,    /*  1 - BUTTON1 - User Button 1 */
+    NOT_ON_ADC,    /*  2 - BUTTON2 - User Button 2 */
+    NOT_ON_ADC,    /*  3 - BCLUART_RXD - Debug Serial RX */
+    NOT_ON_ADC,    /*  4 - BCLUART_TXD - Debug Serial TX */
+    NOT_ON_ADC,    /*  5 - FL_SPI_CS# - FLASH Chip Select (active low) */
+    NOT_ON_ADC,    /*  6 - FL_SPI_CLK - FLASH SPI CLOCK */
+    NOT_ON_ADC,    /*  7 - FL_SPI_MOSI - FLASH Master Output Slave Input */
+    NOT_ON_ADC,    /*  8 - FL_SPI_MISO - FLASH Master Input Slave Output */
+    NOT_ON_ADC,    /*  9 - SIM800_UART_CTS - SIM800 UART CTS */
+    NOT_ON_ADC,    /* 10 - SIM800_UART_RTS - SIM800 UART RTS */
+    NOT_ON_ADC,    /* 11 - SIM800_UART_RX - SIM800 UART RX */
+    NOT_ON_ADC,    /* 12 - SIM800_UART_TX - SIM800 UART TX */
+    NOT_ON_ADC,    /* 13 - A1_PD_SCK - SENSOR A1 CLOCK */
+    NOT_ON_ADC,    /* 14 - B1_PD_SCK - SENSOR B1 CLOCK */
+    NOT_ON_ADC,    /* 15 - BT_RXD - Bluetooth UART RX */
+    NOT_ON_ADC,    /* 16 - BT_TXD - Bluetooth UART TX */
+    NOT_ON_ADC,    /* 17 - GSM_PWR_EN - GSM Power Enable */
+    NOT_ON_ADC,    /* 18 - SIM800_PWR_ON - SIM800 Power On */
+    NOT_ON_ADC,    /* 19 - BT_GPIO1 - Bluetooth GPIO1 */
+    NOT_ON_ADC,    /* 20 - BT_GPIO2 - Bluetooth GPIO2 */
+    NOT_ON_ADC,    /* 21 - SIM800_RING - SIM800 RING */
+    NOT_ON_ADC,    /* 22 - SIM800_NET_STAT - SIM800 NET STATUS */
+    NOT_ON_ADC,    /* 23 - SIM800_STAT - SIM800 STATUS */
+    NOT_ON_ADC,    /* 24 - SIM800_DCD - SIM800 DCD */
+    NOT_ON_ADC,    /* 25 - SIM800_PWR_MON - SIM800 Power Monitor */
+    NOT_ON_ADC,    /* 26 - A2_PD_SCK - Sensor A2 CLOCK */
+    NOT_ON_ADC,    /* 27 - A1_DOUT - Sensor A1 Digital OUTPUT */
+    NOT_ON_ADC,    /* 28 - B1_DOUT - Sensor B1 Digital OUTPUT */
+    NOT_ON_ADC,    /* 29 - A2_DOUT - Sensor A2 Digital OUTPUT */
+    NOT_ON_ADC,    /* 30 - B2_DOUT - Sensor B2 Digital OUTPUT */
+    NOT_ON_ADC,    /* 31 - TMP_ALERT - TMP1075 Alert Pin */
+             0,    /* 32 - Vbat_MSRMNT - Vbatt Measurement Signal */
+    NOT_ON_ADC,    /* 33 - EN3V3 - 3.3V Enable Pin */
+    NOT_ON_ADC,    /* 34 - EN_Vbat_SW - Vbatt Enable */
+    NOT_ON_ADC,    /* 35 - I2C_SDA - TMP1075 SDA */
+    NOT_ON_ADC,    /* 36 - I2C_SCL - TMP1075 SCL */
+    NOT_ON_ADC,    /* 37 - DQ1 DS18B20 - Data Pin (not used) */
+    NOT_ON_ADC,    /* 38 - DQ2 DS18B20 - Data Pin (not used) */
+    NOT_ON_ADC,    /* 39 - LED_RED - Red LED */
+    NOT_ON_ADC,    /* 40 - LED_GREEN - Green LED */
+    NOT_ON_ADC,    /* 41 - CLEAR_WDT - External WDT Clear Pin */
+    NOT_ON_ADC     /* 42 - B2_PD_SCK - SENSOR B2 CLOCK */
 };
 

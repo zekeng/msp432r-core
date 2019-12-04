@@ -111,7 +111,6 @@ typedef enum Board_GPIOName {
  */
 typedef enum Board_I2CName {
     Board_I2CB0 = 0,
-    Board_I2CB1,
 
     Board_I2CCOUNT
 } Board_I2CName;
@@ -212,9 +211,6 @@ typedef enum Board_WiFiName {
 } Board_WiFiName;
 
 /* Board specific I2C addresses */
-#define Board_TMP006_ADDR           (0x40)
-#define Board_RF430CL330_ADDR       (0x28)
-#define Board_TPL0401_ADDR          (0x40)
 
 #ifdef __cplusplus
 }

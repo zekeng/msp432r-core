@@ -411,102 +411,55 @@ GPIO_PinConfig gpioPinConfigs[] = {
     /* port_pin */
     GPIOMSP432_EMPTY_PIN | GPIO_DO_NOT_CONFIG,  /*  0  - dummy */
 
-    /* pins 1-10 */
-    GPIOMSP432_EMPTY_PIN | GPIO_DO_NOT_CONFIG,  /*  1  - 3.3V */
-    GPIOMSP432_P6_0 | GPIO_DO_NOT_CONFIG,       /*  2  - P6.0_A15 */
-    GPIOMSP432_P3_2 | GPIO_DO_NOT_CONFIG,       /*  3  - P3.2_URXD */
-    GPIOMSP432_P3_3 | GPIO_DO_NOT_CONFIG,       /*  4  - P3.3_UTXD */
-    GPIOMSP432_P4_1 | GPIO_DO_NOT_CONFIG,       /*  5  - P4.1_IO_A12 */
-    GPIOMSP432_P4_3 | GPIO_DO_NOT_CONFIG,       /*  6  - P4.3_A10 */
-    GPIOMSP432_P1_5 | GPIO_DO_NOT_CONFIG,       /*  7  - P1.5_SPICLK */
-    GPIOMSP432_P4_6 | GPIO_DO_NOT_CONFIG,       /*  8  - P4.6_IO_A7 */
-    GPIOMSP432_P6_5 | GPIO_DO_NOT_CONFIG,       /*  9  - P6.5_I2CSCL */
-    GPIOMSP432_P6_4 | GPIO_DO_NOT_CONFIG,       /*  10 - P6.4_I2CSDA */
+    GPIOMSP432_P1_0 | GPIO_DO_NOT_CONFIG,    /*  1 - BUTTON1 - User Button 1 */
+    GPIOMSP432_P1_1 | GPIO_DO_NOT_CONFIG,    /*  2 - BUTTON2 - User Button 2 */
+    GPIOMSP432_P1_2 | GPIO_DO_NOT_CONFIG,    /*  3 - BCLUART_RXD - Debug Serial RX */
+    GPIOMSP432_P1_3 | GPIO_DO_NOT_CONFIG,    /*  4 - BCLUART_TXD - Debug Serial TX */
+    GPIOMSP432_P1_4 | GPIO_DO_NOT_CONFIG,    /*  5 - FL_SPI_CS# - FLASH Chip Select (active low) */
+    GPIOMSP432_P1_5 | GPIO_DO_NOT_CONFIG,    /*  6 - FL_SPI_CLK - FLASH SPI CLOCK */
+    GPIOMSP432_P1_6 | GPIO_DO_NOT_CONFIG,    /*  7 - FL_SPI_MOSI - FLASH Master Output Slave Input */
+    GPIOMSP432_P1_7 | GPIO_DO_NOT_CONFIG,    /*  8 - FL_SPI_MISO - FLASH Master Input Slave Output */
 
-    /* pins 11-20 */
-    GPIOMSP432_P3_6 | GPIO_DO_NOT_CONFIG,       /*  11 - P3.6_IO */
-    GPIOMSP432_P5_2 | GPIO_DO_NOT_CONFIG,       /*  12 - P5.2_IO */
-    GPIOMSP432_P5_0 | GPIO_DO_NOT_CONFIG,       /*  13 - P5.0_IO */
-    GPIOMSP432_P1_7 | GPIO_DO_NOT_CONFIG,       /*  14 - P1.7_SPIMISO */
-    GPIOMSP432_P1_6 | GPIO_DO_NOT_CONFIG,       /*  15 - P1.6_SPIMOSI */
-    GPIOMSP432_EMPTY_PIN | GPIO_DO_NOT_CONFIG,  /*  16 - RESET */
-    GPIOMSP432_P5_7 | GPIO_DO_NOT_CONFIG,       /*  17 - P5.7_IO */
-    GPIOMSP432_P3_0 | GPIO_DO_NOT_CONFIG,       /*  18 - P3.0_IO */
-    GPIOMSP432_P2_5 | GPIO_DO_NOT_CONFIG,       /*  19 - P2.5_IO_PWM */
-    GPIOMSP432_EMPTY_PIN | GPIO_DO_NOT_CONFIG,  /*  20 - GND */
+    GPIOMSP432_P2_0 | GPIO_DO_NOT_CONFIG,    /*  9 - SIM800_UART_CTS - SIM800 UART CTS */
+    GPIOMSP432_P2_1 | GPIO_DO_NOT_CONFIG,    /* 10 - SIM800_UART_RTS - SIM800 UART RTS */
+    GPIOMSP432_P2_2 | GPIO_DO_NOT_CONFIG,    /* 11 - SIM800_UART_RX - SIM800 UART RX */
+    GPIOMSP432_P2_3 | GPIO_DO_NOT_CONFIG,    /* 12 - SIM800_UART_TX - SIM800 UART TX */
 
-    /* pins 21-30 */
-    GPIOMSP432_EMPTY_PIN | GPIO_DO_NOT_CONFIG,  /*  21 - 5V */
-    GPIOMSP432_EMPTY_PIN | GPIO_DO_NOT_CONFIG,  /*  22 - GND */
-    GPIOMSP432_P6_1 | GPIO_DO_NOT_CONFIG,       /*  23 - P6.1_A14 */
-    GPIOMSP432_P4_0 | GPIO_DO_NOT_CONFIG,       /*  24 - P4.0_A13 */
-    GPIOMSP432_P4_2 | GPIO_DO_NOT_CONFIG,       /*  25 - P4.2_A11 */
-    GPIOMSP432_P4_4 | GPIO_DO_NOT_CONFIG,       /*  26 - P4.4_A9 */
-    GPIOMSP432_P4_5 | GPIO_DO_NOT_CONFIG,       /*  27 - P4.5_A8 */
-    GPIOMSP432_P4_7 | GPIO_DO_NOT_CONFIG,       /*  28 - P4.7_A6 */
-    GPIOMSP432_P5_4 | GPIO_DO_NOT_CONFIG,       /*  29 - P5.4_IO */
-    GPIOMSP432_P5_5 | GPIO_DO_NOT_CONFIG,       /*  30 - P5.5_IO */
+    GPIOMSP432_P3_0 | GPIO_DO_NOT_CONFIG,    /* 13 - A1_PD_SCK - SENSOR A1 CLOCK */
+    GPIOMSP432_P3_1 | GPIO_DO_NOT_CONFIG,    /* 14 - B1_PD_SCK - SENSOR B1 CLOCK */
+    GPIOMSP432_P3_2 | GPIO_DO_NOT_CONFIG,    /* 15 - BT_RXD - Bluetooth UART RX */
+    GPIOMSP432_P3_3 | GPIO_DO_NOT_CONFIG,    /* 16 - BT_TXD - Bluetooth UART TX */
+    GPIOMSP432_P3_4 | GPIO_DO_NOT_CONFIG,    /* 17 - GSM_PWR_EN - GSM Power Enable */
+    GPIOMSP432_P3_5 | GPIO_DO_NOT_CONFIG,    /* 18 - SIM800_PWR_ON - SIM800 Power On */
+    GPIOMSP432_P3_6 | GPIO_DO_NOT_CONFIG,    /* 19 - BT_GPIO1 - Bluetooth GPIO1 */
+    GPIOMSP432_P3_7 | GPIO_DO_NOT_CONFIG,    /* 20 - BT_GPIO2 - Bluetooth GPIO2 */
 
-    /* pins 31-40 */
-    GPIOMSP432_P3_7 | GPIO_DO_NOT_CONFIG,       /*  31 - P3.7_IO */
-    GPIOMSP432_P3_5 | GPIO_DO_NOT_CONFIG,       /*  32 - P3.5_IO */
-    GPIOMSP432_P5_1 | GPIO_DO_NOT_CONFIG,       /*  33 - P5.1_IO */
-    GPIOMSP432_P2_3 | GPIO_DO_NOT_CONFIG,       /*  34 - P2.3_IO */
-    GPIOMSP432_P6_7 | GPIO_DO_NOT_CONFIG,       /*  35 - P6.7_IO_CAPT */
-    GPIOMSP432_P6_6 | GPIO_DO_NOT_CONFIG,       /*  36 - P6.6_IO_CAPT */
-    GPIOMSP432_P5_6 | GPIO_DO_NOT_CONFIG,       /*  37 - P5.6_PWM */
-    GPIOMSP432_P2_4 | GPIO_DO_NOT_CONFIG,       /*  38 - P2.4_PWM */
-    GPIOMSP432_P2_6 | GPIO_DO_NOT_CONFIG,       /*  39 - P2.6_PWM */
-    GPIOMSP432_P2_7 | GPIO_DO_NOT_CONFIG,       /*  40 - P2.7_PWM */
+    GPIOMSP432_P4_2 | GPIO_DO_NOT_CONFIG,    /* 21 - SIM800_RING - SIM800 RING */
+    GPIOMSP432_P4_3 | GPIO_DO_NOT_CONFIG,    /* 22 - SIM800_NET_STAT - SIM800 NET STATUS */
+    GPIOMSP432_P4_4 | GPIO_DO_NOT_CONFIG,    /* 23 - SIM800_STAT - SIM800 STATUS */
+    GPIOMSP432_P4_5 | GPIO_DO_NOT_CONFIG,    /* 24 - SIM800_DCD - SIM800 DCD */
+    GPIOMSP432_P4_6 | GPIO_DO_NOT_CONFIG,    /* 25 - SIM800_PWR_MON - SIM800 Power Monitor */
+    GPIOMSP432_P4_7 | GPIO_DO_NOT_CONFIG,    /* 26 - A2_PD_SCK - Sensor A2 CLOCK */
 
-    /* bottom row pins 41-56 */
-    GPIOMSP432_P8_5 | GPIO_DO_NOT_CONFIG,       /*  41 - P8.5 */
-    GPIOMSP432_P9_0 | GPIO_DO_NOT_CONFIG,       /*  42 - P9.0 */
-    GPIOMSP432_P8_4 | GPIO_DO_NOT_CONFIG,       /*  43 - P8.4 */
-    GPIOMSP432_P8_2 | GPIO_DO_NOT_CONFIG,       /*  44 - P8.2 */
-    GPIOMSP432_P9_2 | GPIO_DO_NOT_CONFIG,       /*  45 - P9.2 */
-    GPIOMSP432_P6_2 | GPIO_DO_NOT_CONFIG,       /*  46 - P6.2 */
-    GPIOMSP432_P7_3 | GPIO_DO_NOT_CONFIG,       /*  47 - P7.3 */
-    GPIOMSP432_P7_1 | GPIO_DO_NOT_CONFIG,       /*  48 - P7.1 */
-    GPIOMSP432_P9_4 | GPIO_DO_NOT_CONFIG,       /*  49 - P9.4 */
-    GPIOMSP432_P9_6 | GPIO_DO_NOT_CONFIG,       /*  40 - P9.6 */
-    GPIOMSP432_P8_0 | GPIO_DO_NOT_CONFIG,       /*  51 - P8.0 */
-    GPIOMSP432_P7_4 | GPIO_DO_NOT_CONFIG,       /*  52 - P7.4 */
-    GPIOMSP432_P7_6 | GPIO_DO_NOT_CONFIG,       /*  53 - P7.6 */
-    GPIOMSP432_P10_0 | GPIO_DO_NOT_CONFIG,      /*  54 - P10.0 */
-    GPIOMSP432_P10_2 | GPIO_DO_NOT_CONFIG,      /*  55 - P10_2 */
-    GPIOMSP432_P10_4 | GPIO_DO_NOT_CONFIG,      /*  56 - P10.4 */
+    GPIOMSP432_P5_0 | GPIO_DO_NOT_CONFIG,    /* 27 - A1_DOUT - Sensor A1 Digital OUTPUT */
+    GPIOMSP432_P5_1 | GPIO_DO_NOT_CONFIG,    /* 28 - B1_DOUT - Sensor B1 Digital OUTPUT */
+    GPIOMSP432_P5_2 | GPIO_DO_NOT_CONFIG,    /* 29 - A2_DOUT - Sensor A2 Digital OUTPUT */
+    GPIOMSP432_P5_3 | GPIO_DO_NOT_CONFIG,    /* 30 - B2_DOUT - Sensor B2 Digital OUTPUT */
+    GPIOMSP432_P5_4 | GPIO_DO_NOT_CONFIG,    /* 31 - TMP_ALERT - TMP1075 Alert Pin */
+    GPIOMSP432_P5_5 | GPIO_DO_NOT_CONFIG,    /* 32 - Vbat_MSRMNT - Vbatt Measurement Signal */
+    GPIOMSP432_P5_6 | GPIO_DO_NOT_CONFIG,    /* 33 - EN3V3 - 3.3V Enable Pin */
+    GPIOMSP432_P5_7 | GPIO_DO_NOT_CONFIG,    /* 34 - EN_Vbat_SW - Vbatt Enable */
 
-    /* bottom row pins 57-72 */
-    GPIOMSP432_P8_6 | GPIO_DO_NOT_CONFIG,       /*  57 - P8.6 */
-    GPIOMSP432_P8_7 | GPIO_DO_NOT_CONFIG,       /*  58 - P8.7 */
-    GPIOMSP432_P9_1 | GPIO_DO_NOT_CONFIG,       /*  59 - P9.1 */
-    GPIOMSP432_P8_3 | GPIO_DO_NOT_CONFIG,       /*  60 - P8.3 */
-    GPIOMSP432_P5_3 | GPIO_DO_NOT_CONFIG,       /*  61 - P5.3 */
-    GPIOMSP432_P9_3 | GPIO_DO_NOT_CONFIG,       /*  62 - P9.3 */
-    GPIOMSP432_P6_3 | GPIO_DO_NOT_CONFIG,       /*  63 - P6.3 */
-    GPIOMSP432_P7_2 | GPIO_DO_NOT_CONFIG,       /*  64 - P7.2 */
-    GPIOMSP432_P7_0 | GPIO_DO_NOT_CONFIG,       /*  65 - P7.0 */
-    GPIOMSP432_P9_5 | GPIO_DO_NOT_CONFIG,       /*  66 - P9.5 */
-    GPIOMSP432_P9_7 | GPIO_DO_NOT_CONFIG,       /*  67 - P9.7 */
-    GPIOMSP432_P7_5 | GPIO_DO_NOT_CONFIG,       /*  68 - P7.5 */
-    GPIOMSP432_P7_7 | GPIO_DO_NOT_CONFIG,       /*  69 - P7.7 */
-    GPIOMSP432_P10_1 | GPIO_DO_NOT_CONFIG,      /*  70 - P10.1 */
-    GPIOMSP432_P10_3 | GPIO_DO_NOT_CONFIG,      /*  71 - P10.3 */
-    GPIOMSP432_P10_5 | GPIO_DO_NOT_CONFIG,      /*  72 - P10.5 */
+    GPIOMSP432_P6_6 | GPIO_DO_NOT_CONFIG,    /* 35 - I2C_SDA - TMP1075 SDA */
+    GPIOMSP432_P6_7 | GPIO_DO_NOT_CONFIG,    /* 36 - I2C_SCL - TMP1075 SCL */
 
-    /* virtual pins 73-78 */
-    GPIOMSP432_P1_1 | GPIO_DO_NOT_CONFIG,       /*  73 - P1.1 SW1 */
-    GPIOMSP432_P1_4 | GPIO_DO_NOT_CONFIG,       /*  74 - P1.4 SW2 */
-    GPIOMSP432_P2_0 | GPIO_DO_NOT_CONFIG,       /*  75 - P2.0 RED_LED */
-    GPIOMSP432_P2_1 | GPIO_DO_NOT_CONFIG,       /*  76 - P2.1 GREEN_LED */
-    GPIOMSP432_P2_2 | GPIO_DO_NOT_CONFIG,       /*  77 - P2.2 BLUE_LED */
-    GPIOMSP432_P1_0 | GPIO_DO_NOT_CONFIG,       /*  78 - P1.0 LED1 */
+    GPIOMSP432_P7_0 | GPIO_DO_NOT_CONFIG,    /* 37 - DQ1 DS18B20 - Data Pin (not used) */
+    GPIOMSP432_P7_1 | GPIO_DO_NOT_CONFIG,    /* 38 - DQ2 DS18B20 - Data Pin (not used) */
+    GPIOMSP432_P7_2 | GPIO_DO_NOT_CONFIG,    /* 39 - LED_RED - Red LED */
+    GPIOMSP432_P7_3 | GPIO_DO_NOT_CONFIG,    /* 40 - LED_GREEN - Green LED */
 
-    /* unused by Energia pins 79-81 */
-    GPIOMSP432_P8_1 | GPIO_DO_NOT_CONFIG,       /*  79 - P8.1 */
-    GPIOMSP432_P3_1 | GPIO_DO_NOT_CONFIG,       /*  80 - P3.1 */
-    GPIOMSP432_P3_4 | GPIO_DO_NOT_CONFIG,       /*  81 - P3.4 */
+    GPIOMSP432_P8_0 | GPIO_DO_NOT_CONFIG,    /* 41 - CLEAR_WDT - External WDT Clear Pin */
+    GPIOMSP432_P8_1 | GPIO_DO_NOT_CONFIG     /* 42 - B2_PD_SCK - SENSOR B2 CLOCK */
 };
 
 /*
@@ -520,102 +473,48 @@ GPIO_CallbackFxn gpioCallbackFunctions[] = {
     /* port_pin */
     NULL,  /*  0  - dummy */
 
-    /* pins 1-10 */
-    NULL,  /*  1  - 3.3V */
-    NULL,  /*  2  - P6.0_A15 */
-    NULL,  /*  3  - P3.2_URXD */
-    NULL,  /*  4  - P3.3_UTXD */
-    NULL,  /*  5  - P4.1_IO_A12 */
-    NULL,  /*  6  - P4.3_A10 */
-    NULL,  /*  7  - P1.5_SPICLK */
-    NULL,  /*  8  - P4.6_IO_A7 */
-    NULL,  /*  9  - P6.5_I2CSCL */
-    NULL,  /*  10 - P6.4_I2CSDA */
-
-    /* pins 11-20 */
-    NULL,  /*  11 - P3.6_IO */
-    NULL,  /*  12 - P5.2_IO */
-    NULL,  /*  13 - P5.0_IO */
-    NULL,  /*  14 - P1.7_SPIMISO */
-    NULL,  /*  15 - P1.6_SPIMOSI */
-    NULL,  /*  16 - RESET */
-    NULL,  /*  17 - P5.7_IO */
-    NULL,  /*  18 - P3.0_IO */
-    NULL,  /*  19 - P2.5_IO_PWM */
-    NULL,  /*  20 - GND */
-
-    /* pins 21-30 */
-    NULL,  /*  21 - 5V */
-    NULL,  /*  22 - GND */
-    NULL,  /*  23 - P6.1_A14 */
-    NULL,  /*  24 - P4.0_A13 */
-    NULL,  /*  25 - P4.2_A11 */
-    NULL,  /*  26 - P4.4_A9 */
-    NULL,  /*  27 - P4.5_A8 */
-    NULL,  /*  28 - P4.7_A6 */
-    NULL,  /*  29 - P5.4_IO */
-    NULL,  /*  30 - P5.5_IO */
-
-    /* pins 31-40 */
-    NULL,  /*  31 - P3.7_IO */
-    NULL,  /*  32 - P3.5_IO */
-    NULL,  /*  33 - P5.1_IO */
-    NULL,  /*  34 - P2.3_IO */
-    NULL,  /*  35 - P6.7_IO_CAPT */
-    NULL,  /*  36 - P6.6_IO_CAPT */
-    NULL,  /*  37 - P5.6_PWM */
-    NULL,  /*  38 - P2.4_PWM */
-    NULL,  /*  39 - P2.6_PWM */
-    NULL,  /*  40 - P2.7_PWM */
-
-    /* pins 41-56 */
-    NULL,  /*  41 - P8.5 */
-    NULL,  /*  42 - P9.0 */
-    NULL,  /*  43 - P8.4 */
-    NULL,  /*  44 - P8.2 */
-    NULL,  /*  45 - P9.2 */
-    NULL,  /*  46 - P6.2 */
-    NULL,  /*  47 - P7.3 */
-    NULL,  /*  48 - P7.1 */
-    NULL,  /*  49 - P9.4 */
-    NULL,  /*  40 - P9.6 */
-    NULL,  /*  51 - P8.0 */
-    NULL,  /*  52 - P7.4 */
-    NULL,  /*  53 - P7.6 */
-    NULL,  /*  54 - P10.0 */
-    NULL,  /*  55 - P10_2 */
-    NULL,  /*  56 - P10.4 */
-
-    /* pins 57-72 */
-    NULL,  /*  57 - P8.6 */
-    NULL,  /*  58 - P8.7 */
-    NULL,  /*  59 - P9.1 */
-    NULL,  /*  60 - P8.3 */
-    NULL,  /*  61 - P5.3 */
-    NULL,  /*  62 - P9.3 */
-    NULL,  /*  63 - P6.3 */
-    NULL,  /*  64 - P7.2 */
-    NULL,  /*  65 - P7.0 */
-    NULL,  /*  66 - P9.5 */
-    NULL,  /*  67 - P9.7 */
-    NULL,  /*  68 - P7.5 */
-    NULL,  /*  69 - P7.7 */
-    NULL,  /*  70 - P10.1 */
-    NULL,  /*  71 - P10.3 */
-    NULL,  /*  72 - P10.5 */
-
-    /* virtual pins 73-78 */
-    NULL,  /*  73 - P1.1 SW1 */
-    NULL,  /*  74 - P1.4 SW2 */
-    NULL,  /*  75 - P2.0 RED_LED */
-    NULL,  /*  76 - P2.1 GREEN_LED */
-    NULL,  /*  77 - P2.2 BLUE_LED */
-    NULL,  /*  78 - P1.0 LED1 */
-
-    /* unused by Energia pins 79-81 */
-    NULL,  /*  79 - P8.1 */
-    NULL,  /*  80 - P3.1 */
-    NULL,  /*  80 - P3.4 */
+    NULL,    /*  1 - BUTTON1 - User Button 1 */
+    NULL,    /*  2 - BUTTON2 - User Button 2 */
+    NULL,    /*  3 - BCLUART_RXD - Debug Serial RX */
+    NULL,    /*  4 - BCLUART_TXD - Debug Serial TX */
+    NULL,    /*  5 - FL_SPI_CS# - FLASH Chip Select (active low) */
+    NULL,    /*  6 - FL_SPI_CLK - FLASH SPI CLOCK */
+    NULL,    /*  7 - FL_SPI_MOSI - FLASH Master Output Slave Input */
+    NULL,    /*  8 - FL_SPI_MISO - FLASH Master Input Slave Output */
+    NULL,    /*  9 - SIM800_UART_CTS - SIM800 UART CTS */
+    NULL,    /* 10 - SIM800_UART_RTS - SIM800 UART RTS */
+    NULL,    /* 11 - SIM800_UART_RX - SIM800 UART RX */
+    NULL,    /* 12 - SIM800_UART_TX - SIM800 UART TX */
+    NULL,    /* 13 - A1_PD_SCK - SENSOR A1 CLOCK */
+    NULL,    /* 14 - B1_PD_SCK - SENSOR B1 CLOCK */
+    NULL,    /* 15 - BT_RXD - Bluetooth UART RX */
+    NULL,    /* 16 - BT_TXD - Bluetooth UART TX */
+    NULL,    /* 17 - GSM_PWR_EN - GSM Power Enable */
+    NULL,    /* 18 - SIM800_PWR_ON - SIM800 Power On */
+    NULL,    /* 19 - BT_GPIO1 - Bluetooth GPIO1 */
+    NULL,    /* 20 - BT_GPIO2 - Bluetooth GPIO2 */
+    NULL,    /* 21 - SIM800_RING - SIM800 RING */
+    NULL,    /* 22 - SIM800_NET_STAT - SIM800 NET STATUS */
+    NULL,    /* 23 - SIM800_STAT - SIM800 STATUS */
+    NULL,    /* 24 - SIM800_DCD - SIM800 DCD */
+    NULL,    /* 25 - SIM800_PWR_MON - SIM800 Power Monitor */
+    NULL,    /* 26 - A2_PD_SCK - Sensor A2 CLOCK */
+    NULL,    /* 27 - A1_DOUT - Sensor A1 Digital OUTPUT */
+    NULL,    /* 28 - B1_DOUT - Sensor B1 Digital OUTPUT */
+    NULL,    /* 29 - A2_DOUT - Sensor A2 Digital OUTPUT */
+    NULL,    /* 30 - B2_DOUT - Sensor B2 Digital OUTPUT */
+    NULL,    /* 31 - TMP_ALERT - TMP1075 Alert Pin */
+    NULL,    /* 32 - Vbat_MSRMNT - Vbatt Measurement Signal */
+    NULL,    /* 33 - EN3V3 - 3.3V Enable Pin */
+    NULL,    /* 34 - EN_Vbat_SW - Vbatt Enable */
+    NULL,    /* 35 - I2C_SDA - TMP1075 SDA */
+    NULL,    /* 36 - I2C_SCL - TMP1075 SCL */
+    NULL,    /* 37 - DQ1 DS18B20 - Data Pin (not used) */
+    NULL,    /* 38 - DQ2 DS18B20 - Data Pin (not used) */
+    NULL,    /* 39 - LED_RED - Red LED */
+    NULL,    /* 40 - LED_GREEN - Green LED */
+    NULL,    /* 41 - CLEAR_WDT - External WDT Clear Pin */
+    NULL     /* 42 - B2_PD_SCK - SENSOR B2 CLOCK */
 };
 
 /* The device-specific GPIO_config structure */
@@ -700,16 +599,8 @@ const I2CMSP432_HWAttrsV1 i2cMSP432HWAttrs[Board_I2CCOUNT] = {
         .intNum = INT_EUSCIB1,
         .intPriority = (~0),
         .clockSource = EUSCI_B_I2C_CLOCKSOURCE_SMCLK,
-        .dataPin = I2CMSP432_P6_4_UCB1SDA,
-        .clkPin = I2CMSP432_P6_5_UCB1SCL
-    },
-    {
-        .baseAddr = EUSCI_B0_BASE,
-        .intNum = INT_EUSCIB0,
-        .intPriority = (~0),
-        .clockSource = EUSCI_B_I2C_CLOCKSOURCE_SMCLK,
-        .dataPin = I2CMSP432_P1_6_UCB0SDA,
-        .clkPin = I2CMSP432_P1_7_UCB0SCL
+        .dataPin = I2CMSP432_P6_6_UCB3SDA,
+        .clkPin = I2CMSP432_P6_7_UCB3SCL
     }
 };
 
@@ -718,12 +609,7 @@ const I2C_Config I2C_config[] = {
         .fxnTablePtr = &myI2CMSP432_fxnTable,
         .object = &i2cMSP432Objects[0],
         .hwAttrs = &i2cMSP432HWAttrs[0]
-    },
-    {
-        .fxnTablePtr = &myI2CMSP432_fxnTable,
-        .object = &i2cMSP432Objects[1],
-        .hwAttrs = &i2cMSP432HWAttrs[1]
-    },
+    }
 };
 
 const uint_least8_t I2C_count = Board_I2CCOUNT;
@@ -1034,22 +920,6 @@ const SPIMSP432DMA_HWAttrsV1 spiMSP432DMAHWAttrs[Board_SPICOUNT] = {
         .stePin  = SPIMSP432DMA_P1_4_UCB0STE,
         .pinMode  = EUSCI_SPI_3PIN,
         .minDmaTransferSize = 16
-    },
-    {
-        .baseAddr = EUSCI_B2_BASE,
-        .bitOrder = EUSCI_B_SPI_MSB_FIRST,
-        .clockSource = EUSCI_B_SPI_CLOCKSOURCE_SMCLK,
-        .defaultTxBufValue = 0,
-        .dmaIntNum = INT_DMA_INT2,
-        .intPriority = 0xC0,       /* make SPI interrupt one priority higher than default */
-        .rxDMAChannelIndex = DMA_CH5_EUSCIB2RX0,
-        .txDMAChannelIndex = DMA_CH4_EUSCIB2TX0,
-        .clkPin  = SPIMSP432DMA_P3_5_UCB2CLK,
-        .simoPin = SPIMSP432DMA_P3_6_UCB2SIMO,
-        .somiPin = SPIMSP432DMA_P3_7_UCB2SOMI,
-        .stePin  = SPIMSP432DMA_P3_4_UCB2STE,
-        .pinMode  = EUSCI_SPI_3PIN,
-        .minDmaTransferSize = 16
     }
 };
 
@@ -1058,12 +928,7 @@ const SPI_Config SPI_config[] = {
         .fxnTablePtr = &mySPIMSP432DMA_fxnTable,
         .object = &spiMSP432DMAObjects[0],
         .hwAttrs = &spiMSP432DMAHWAttrs[0]
-    },
-    {
-        .fxnTablePtr = &mySPIMSP432DMA_fxnTable,
-        .object = &spiMSP432DMAObjects[1],
-        .hwAttrs = &spiMSP432DMAHWAttrs[1]
-    },
+    }
 };
 
 const uint_least8_t SPI_count = Board_SPICOUNT;
@@ -1276,22 +1141,6 @@ const UARTMSP432_HWAttrsV1 uartMSP432HWAttrs[Board_UARTCOUNT] = {
     },
 
     {
-        .baseAddr = EUSCI_A2_BASE,
-        .intNum = INT_EUSCIA2,
-        .intPriority = (0xc0),
-        .clockSource = EUSCI_A_UART_CLOCKSOURCE_SMCLK,
-        .bitOrder = EUSCI_A_UART_LSB_FIRST,
-        .numBaudrateEntries = sizeof(uartMSP432Baudrates) /
-            sizeof(UARTMSP432_BaudrateConfig),
-        .baudrateLUT = uartMSP432Baudrates,
-        .ringBufPtr  = uartMSP432RingBuffer1,
-        .ringBufSize = sizeof(uartMSP432RingBuffer1),
-        .rxPin = UARTMSP432_P3_2_UCA2RXD,
-        .txPin = UARTMSP432_P3_3_UCA2TXD
-    },
-
-#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
-    {
         .baseAddr = EUSCI_A1_BASE,
         .intNum = INT_EUSCIA1,
         .intPriority = (0xc0),
@@ -1300,10 +1149,26 @@ const UARTMSP432_HWAttrsV1 uartMSP432HWAttrs[Board_UARTCOUNT] = {
         .numBaudrateEntries = sizeof(uartMSP432Baudrates) /
                               sizeof(UARTMSP432_BaudrateConfig),
         .baudrateLUT = uartMSP432Baudrates,
-        .ringBufPtr  = uartMSP432RingBuffer2,
-        .ringBufSize = sizeof(uartMSP432RingBuffer2),
+        .ringBufPtr  = uartMSP432RingBuffer1,
+        .ringBufSize = sizeof(uartMSP432RingBuffer1),
         .rxPin = UARTMSP432_P2_2_UCA1RXD,
         .txPin = UARTMSP432_P2_3_UCA1TXD
+    },
+
+#ifdef ENERGIA_BOARD_SERIAL2_ENABLE
+    {
+        .baseAddr = EUSCI_A2_BASE,
+        .intNum = INT_EUSCIA2,
+        .intPriority = (0xc0),
+        .clockSource = EUSCI_A_UART_CLOCKSOURCE_SMCLK,
+        .bitOrder = EUSCI_A_UART_LSB_FIRST,
+        .numBaudrateEntries = sizeof(uartMSP432Baudrates) /
+            sizeof(UARTMSP432_BaudrateConfig),
+        .baudrateLUT = uartMSP432Baudrates,
+        .ringBufPtr  = uartMSP432RingBuffer2,
+        .ringBufSize = sizeof(uartMSP432RingBuffer2),
+        .rxPin = UARTMSP432_P3_2_UCA2RXD,
+        .txPin = UARTMSP432_P3_3_UCA2TXD
     },
 #endif
 
