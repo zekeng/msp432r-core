@@ -595,8 +595,8 @@ I2CMSP432_Object i2cMSP432Objects[Board_I2CCOUNT];
 /* I2C configuration structure */
 const I2CMSP432_HWAttrsV1 i2cMSP432HWAttrs[Board_I2CCOUNT] = {
     {
-        .baseAddr = EUSCI_B1_BASE,
-        .intNum = INT_EUSCIB1,
+        .baseAddr = EUSCI_B3_BASE,
+        .intNum = INT_EUSCIB3,
         .intPriority = (~0),
         .clockSource = EUSCI_B_I2C_CLOCKSOURCE_SMCLK,
         .dataPin = I2CMSP432_P6_6_UCB3SDA,
