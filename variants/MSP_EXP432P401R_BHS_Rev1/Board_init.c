@@ -827,55 +827,6 @@ void Board_initPWM(void)
 }
 
 /*
- *  =============================== SDSPI ===============================
- */
-/* Place into subsections to allow the TI linker to remove items properly */
-#if defined(__TI_COMPILER_VERSION__)
-#pragma DATA_SECTION(SDSPI_config, ".const:SDSPI_config")
-#pragma DATA_SECTION(sdspiMSP432HWAttrs, ".const:sdspiMSP432HWAttrs")
-#endif
-
-#include <ti/drivers/SDSPI.h>
-#include <ti/drivers/sdspi/SDSPIMSP432.h>
-
-/* SDSPI objects */
-SDSPIMSP432_Object sdspiMSP432Objects[Board_SDSPICOUNT];
-
-/* SDSPI configuration structure, describing which pins are to be used */
-const SDSPIMSP432_HWAttrsV1 sdspiMSP432HWAttrs[Board_SDSPICOUNT] = {
-    {
-        .baseAddr = EUSCI_B0_BASE,
-        .clockSource = EUSCI_B_SPI_CLOCKSOURCE_SMCLK,
-
-        /* CLK, MOSI & MISO ports & pins */
-        .sckPin = SDSPIMSP432_P1_5_UCB0CLK,
-        .somiPin = SDSPIMSP432_P1_7_UCB0SOMI,
-        .simoPin = SDSPIMSP432_P1_6_UCB0SIMO,
-
-        /* Chip select port & pin */
-        .csPin = SDSPIMSP432_P4_6_CS
-    }
-};
-
-const SDSPI_Config SDSPI_config[] = {
-    {
-        .fxnTablePtr = &SDSPIMSP432_fxnTable,
-        .object = &sdspiMSP432Objects[0],
-        .hwAttrs = &sdspiMSP432HWAttrs[0]
-    },
-};
-
-const uint_least8_t SDSPI_count = Board_SDSPICOUNT;
-
-/*
- *  ======== Board_initSDSPI ========
- */
-void Board_initSDSPI(void)
-{
-    SDSPI_init();
-}
-
-/*
  *  =============================== SPI ===============================
  */
 
