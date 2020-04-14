@@ -2,12 +2,15 @@
 #define __PGMSPACE_H_ 1
 
 #include <inttypes.h>
+#include <stdio.h>
 
 #define PROGMEM
 #define PGM_P  const char *
 #define PSTR(str) (str)
 
 #define _SFR_BYTE(n) (n)
+
+#define _BV(x) (1<<(x))
 
 typedef void prog_void;
 typedef char prog_char;
