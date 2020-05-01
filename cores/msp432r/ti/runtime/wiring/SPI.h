@@ -85,24 +85,24 @@ class SPIClass
 
         SPIClass(void);
         SPIClass(unsigned long);
-        void begin(); // Default
-        void begin(uint8_t);
-        void end();
-        void end(uint8_t);
+        virtual void begin(); // Default
+        virtual void begin(uint8_t);
+        virtual void end();
+        virtual void end(uint8_t);
 
-        void setBitOrder(uint8_t);
-        void setBitOrder(uint8_t, uint8_t);
+        virtual void setBitOrder(uint8_t);
+        virtual void setBitOrder(uint8_t, uint8_t);
 
-        void setDataMode(uint8_t);
-        void setClockDivider(uint8_t);
+        virtual void setDataMode(uint8_t);
+        virtual void setClockDivider(uint8_t);
 
-        uint8_t transfer(uint8_t);
-        uint8_t transfer(uint8_t, uint8_t);
-        uint8_t transfer(uint8_t, uint8_t, uint8_t);
-        uint8_t *transfer(uint8_t *, size_t);
+        virtual uint8_t transfer(uint8_t);
+        virtual uint8_t transfer(uint8_t, uint8_t);
+        virtual uint8_t transfer(uint8_t, uint8_t, uint8_t);
+        virtual uint8_t *transfer(uint8_t *, size_t);
 
-        void setModule(uint8_t);
-        void usingInterrupt(uint8_t);
+        virtual void setModule(uint8_t);
+        virtual void usingInterrupt(uint8_t);
 };
 
 extern SPIClass SPI;
