@@ -944,6 +944,7 @@ void Board_initPWM(void)
  *  =============================== SDSPI ===============================
  */
 /* Place into subsections to allow the TI linker to remove items properly */
+#if (0)
 #if defined(__TI_COMPILER_VERSION__)
 #pragma DATA_SECTION(SDSPI_config, ".const:SDSPI_config")
 #pragma DATA_SECTION(sdspiMSP432HWAttrs, ".const:sdspiMSP432HWAttrs")
@@ -988,7 +989,7 @@ void Board_initSDSPI(void)
 {
     SDSPI_init();
 }
-
+#endif
 /*
  *  =============================== SPI ===============================
  */

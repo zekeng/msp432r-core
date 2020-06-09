@@ -179,7 +179,7 @@ uint8_t TwoWire::endTransmission(uint8_t sendStop)
         return (4); /* 4 = 'other error' */
     }
 
-    ret = I2C_transfer(i2c, &(wc->i2cTransaction));
+    ret = I2C_transferTimeout(i2c, &(wc->i2cTransaction), 50);
 
     wc->txWriteIndex = 0;
 
