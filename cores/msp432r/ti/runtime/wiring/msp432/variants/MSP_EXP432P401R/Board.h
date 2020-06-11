@@ -154,6 +154,7 @@ typedef enum Board_SDSPIName {
 typedef enum Board_SPIName {
     Board_SPIB0 = 0,
     Board_SPIB2,
+    Board_SPIB3,
 
     Board_SPICOUNT
 } Board_SPIName;

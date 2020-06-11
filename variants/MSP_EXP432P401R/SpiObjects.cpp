@@ -38,3 +38,4 @@
  */
 SPIClass SPI(Board_SPIB0);
 SPIClass SPI1(Board_SPIB2);
+SPIClass SPI2(Board_SPIB3);

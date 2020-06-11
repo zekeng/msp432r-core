@@ -1051,6 +1051,22 @@ const SPIMSP432DMA_HWAttrsV1 spiMSP432DMAHWAttrs[Board_SPICOUNT] = {
         .stePin  = SPIMSP432DMA_P3_4_UCB2STE,
         .pinMode  = EUSCI_SPI_3PIN,
         .minDmaTransferSize = 16
+    },
+    {
+        .baseAddr = EUSCI_B3_BASE,
+        .bitOrder = EUSCI_B_SPI_MSB_FIRST,
+        .clockSource = EUSCI_B_SPI_CLOCKSOURCE_SMCLK,
+        .defaultTxBufValue = 0,
+        .dmaIntNum = INT_DMA_INT3,
+        .intPriority = 0xC0,       /* make SPI interrupt one priority higher than default */
+        .rxDMAChannelIndex = DMA_CH7_EUSCIB3RX0,
+        .txDMAChannelIndex = DMA_CH6_EUSCIB3TX0,
+        .clkPin  = SPIMSP432DMA_P10_1_UCB3CLK,
+        .simoPin = SPIMSP432DMA_P10_2_UCB3SIMO,
+        .somiPin = SPIMSP432DMA_P10_3_UCB3SOMI,
+        .stePin  = SPIMSP432DMA_P10_0_UCB3STE,
+        .pinMode  = EUSCI_SPI_3PIN,
+        .minDmaTransferSize = 16
     }
 };
 
@@ -1064,6 +1080,11 @@ const SPI_Config SPI_config[] = {
         .fxnTablePtr = &mySPIMSP432DMA_fxnTable,
         .object = &spiMSP432DMAObjects[1],
         .hwAttrs = &spiMSP432DMAHWAttrs[1]
+    },
+    {
+        .fxnTablePtr = &mySPIMSP432DMA_fxnTable,
+        .object = &spiMSP432DMAObjects[2],
+        .hwAttrs = &spiMSP432DMAHWAttrs[2]
     },
 };
 

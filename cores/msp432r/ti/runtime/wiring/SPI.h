@@ -107,5 +107,6 @@ class SPIClass
 
 extern SPIClass SPI;
 extern SPIClass SPI1;
+extern SPIClass SPI2;
 
 #endif
