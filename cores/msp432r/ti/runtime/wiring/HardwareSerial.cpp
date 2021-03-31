@@ -167,6 +167,8 @@ void HardwareSerial::release(void)
 
 void HardwareSerial::end(void)
 {
+    if (begun == false) return;
+
     begun = false;
     UART_close(uart);
     uart = NULL;
