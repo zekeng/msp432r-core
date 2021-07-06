@@ -120,7 +120,11 @@ void TwoWire::begin(void)
 
     I2C_Params_init(&params);
     params.transferMode = I2C_MODE_BLOCKING;
+#ifdef FORCE_I2C_BITRATE_100kHz
+    params.bitRate = I2C_100kHz;
+#else
     params.bitRate = I2C_400kHz;
+#endif
 
     i2c = I2C_open(i2cModule, &params);
 
@@ -179,7 +183,7 @@ uint8_t TwoWire::endTransmission(uint8_t sendStop)
         return (4); /* 4 = 'other error' */
     }
 
-    ret = I2C_transferTimeout(i2c, &(wc->i2cTransaction), 50);
+    ret = (I2C_transferTimeout(i2c, &(wc->i2cTransaction), 1000) == 0) ? true : false;
 
     wc->txWriteIndex = 0;
 
